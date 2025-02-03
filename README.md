@@ -1,9 +1,12 @@
 # trs80m100-list
-Python program to convert tokenised TRS 80 Model 100/102/200 BASIC program file to text.
+Python program to convert tokenised TRS 80 Model 100/102/200 BASIC program file (usually .BA extension when saved from portable computer) to text.
 
 The TRS-80 Model 100/102/200 and the compatible Kyocera Kyotronic-85 and Olivetti M10
 all use the same tokenized BASIC file format. This program reads a tokenized BASIC file
 and displays the readable text version of the program.
+
+Although other similar programs are available, this Python version is platform independent. The -cr
+option adds carriage return (CR) to the end of line so the output is Windows compatible.
 
 The converted program can be read and edited and loaded back into the computer as a text file
 (.DO extension) or used to port to other versions of BASIC.
@@ -11,7 +14,8 @@ The converted program can be read and edited and loaded back into the computer a
 As the file format is very simple with no header or magic numbers there is no error checking.
 
 Note: the NEC PC-8xxx portable computers do not use the same tokenized BASIC file format.
-
+# Installation
+This program requires Python 3 and the argparse module.
 # Usage
 ```
 Usage: trs80m100_list.py [-h] [-cr] infile
