@@ -176,7 +176,6 @@ arg_count = len(args)
 f = open(args['infile'],"rb")
 pgm = bytearray(f.read())
 f.close()
-#print(pgm)
 length = len(pgm)
 
 current_token = 2
